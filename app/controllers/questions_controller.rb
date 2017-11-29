@@ -1,7 +1,10 @@
 class QuestionsController < ApplicationController
 
+  def index
+    @questions = Question.all
+  end
+
   def show
-    @list = List.find(params[:id])
-    render :show
+    @question = Question.find(params[:id])
   end
 end
